@@ -48,11 +48,14 @@ You need to install at least `webpack`, `babel-loader` and probably `babel-cli`.
 A minimal `webpack.config.js` would be:
 
 ```js
+const path = require("path");
+
 module.exports = {
   module: {
     rules: [
       {
         test: /\.(js|jsx|tsx|ts|mjs)$/,
+        include: [path.resolve(__dirname, "src")],
         use: {
           loader: "babel-loader"
         }
