@@ -39,6 +39,55 @@ When bundling with webpack/babel-loader, it includes the presets for typescript 
 
 When running in any other environment, it falls back to the same config as for webpack.
 
+## Using with webpack
+
+With this preset, you can bundle a basic react native app for the web with very little or technically no webpack config.
+
+You need to install at least `webpack`, `babel-loader` and probably `babel-cli`.
+
+A minimal `webpack.config.js` would be:
+
+```js
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx|tsx|ts|mjs)$/,
+        use: {
+          loader: "babel-loader"
+        }
+      }
+    ]
+  },
+  resolve: {
+    extensions: [
+      ".web.js",
+      ".js",
+      ".web.ts",
+      ".ts",
+      ".web.tsx",
+      ".tsx",
+      ".web.mjs",
+      ".mjs"
+    ]
+  }
+};
+```
+
+And technically no config file with this command (doesn't work great though)
+
+```
+npx webpack --module-bind js=babel-loader
+```
+
+Don't forget to add a `.browserslistrc` to your root directory or your bundle will be huge. For example:
+
+```
+>0.5%
+not ie 11
+not samsung < 8
+```
+
 ## Changelog
 
 - 1.3.1 actually add it as a dependency, should have started on 0.x
