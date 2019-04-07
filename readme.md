@@ -38,4 +38,5 @@ When running in any other environment, it falls back to the same config as for w
 
 ## Changelog
 
+- 1.1.0 add `babel-plugin-module-resolver` as dependency
 - 1.0.0 Initial Release
