@@ -6,8 +6,11 @@ A babel preset that configures itself for both metro with react-native and webpa
 
 ## Usage
 
+Install with npm. core-js@3 is a peer dependency and you might need to install it seperately.
+
 ```
 npm install --save-dev @kall/babel-preset-react-native-web-quick
+npm install --save-dev core-js@3
 ```
 
 Add this `babel.config.js` to your project:
@@ -38,6 +41,8 @@ When running in any other environment, it falls back to the same config as for w
 
 ## Changelog
 
+- 1.3.1 actually add it as a dependency, should have started on 0.x
+- 1.3.0 make core-js a peer dependecy
 - 1.2.0 add `babel-plugin-react-native-web` as dependency, oops
 - 1.1.0 add `babel-plugin-module-resolver` as dependency
 - 1.0.0 Initial Release
