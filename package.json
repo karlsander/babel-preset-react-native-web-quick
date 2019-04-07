@@ -1,0 +1,30 @@
+{
+  "name": "@kall/babel-preset-react-native-web-quick",
+  "version": "1.0.0",
+  "description": "Babel preset that configures itself for both metro/react-native and webpack/react-native-web",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karlsander/babel-preset-react-native-web-quick.git"
+  },
+  "keywords": [
+    "babel",
+    "preset"
+  ],
+  "author": "Karl Sander <kall@kall.ws>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karlsander/babel-preset-react-native-web-quick/issues"
+  },
+  "homepage": "https://github.com/karlsander/babel-preset-react-native-web-quick#readme",
+  "dependencies": {
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-flow": "^7.0.0",
+    "@babel/preset-typescript": "^7.3.3",
+    "core-js": "^3.0.1",
+    "metro-react-native-babel-preset": "^0.53.1"
+  },
+  "peerDependencies": {
+    "@babel/core": "^7.0.0-0"
+  }
+}
