@@ -1,5 +1,7 @@
 # babel-preset-react-native-web-quick
 
+[![npm link](https://img.shields.io/npm/v/@kall/babel-preset-react-native-web-quick.svg)](https://www.npmjs.com/package/@kall/babel-preset-react-native-web-quick)
+
 A babel preset that configures itself for both metro with react-native and webpack with react-native-web. Use this instead of `module:metro-react-native-babel-preset`.
 
 ## Usage
