@@ -1,6 +1,6 @@
 {
   "name": "@kall/babel-preset-react-native-web-quick",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Babel preset that configures itself for both metro/react-native and webpack/react-native-web",
   "main": "index.js",
   "repository": {
