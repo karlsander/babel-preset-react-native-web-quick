@@ -93,6 +93,7 @@ not samsung < 8
 
 ## Changelog
 
+- 1.4.0 require() all babel presets and plugins so they can be resolved even if they are installed in nested node_modules. Is this what you're supposed to do? Well it works...
 - 1.3.1 actually add it as a dependency, should have started on 0.x
 - 1.3.0 make core-js a peer dependecy
 - 1.2.0 add `babel-plugin-react-native-web` as dependency, oops

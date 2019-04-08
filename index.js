@@ -1,15 +1,15 @@
 const webpackNoPresetEnv = {
-  presets: ["@babel/preset-typescript", "@babel/preset-flow"],
+  presets: [require("@babel/preset-typescript"), require("@babel/preset-flow")],
   plugins: [
-    "@babel/plugin-proposal-class-properties",
-    "@babel/plugin-proposal-nullish-coalescing-operator",
-    "@babel/plugin-proposal-object-rest-spread",
-    "@babel/plugin-proposal-optional-catch-binding",
-    "@babel/plugin-proposal-optional-chaining",
-    "@babel/plugin-transform-react-display-name",
-    "@babel/plugin-transform-react-jsx-source",
-    "@babel/plugin-transform-react-jsx",
-    "react-native-web"
+    require("@babel/plugin-proposal-class-properties"),
+    require("@babel/plugin-proposal-nullish-coalescing-operator"),
+    require("@babel/plugin-proposal-object-rest-spread"),
+    require("@babel/plugin-proposal-optional-catch-binding"),
+    require("@babel/plugin-proposal-optional-chaining"),
+    require("@babel/plugin-transform-react-display-name"),
+    require("@babel/plugin-transform-react-jsx-source"),
+    require("@babel/plugin-transform-react-jsx"),
+    require("babel-plugin-react-native-web")
   ]
 };
 
@@ -17,7 +17,7 @@ const webpack = {
   presets: [
     ...webpackNoPresetEnv.presets,
     [
-      "@babel/preset-env",
+      require("@babel/preset-env"),
       {
         useBuiltIns: "usage",
         modules: "cjs",
@@ -29,12 +29,12 @@ const webpack = {
 };
 
 const metro = {
-  presets: ["module:metro-react-native-babel-preset"],
+  presets: [require("metro-react-native-babel-preset")],
   plugins: []
 };
 
 module.exports = ({ caller }, { noPresetEnv = false }) => {
-  // is either "metro" or "babel-loader"
+  // is either "metro" or "@babel-loader"
   const runningIn = caller(({ name }) => name);
   return runningIn === "metro"
     ? metro
