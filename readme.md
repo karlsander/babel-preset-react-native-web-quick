@@ -4,10 +4,10 @@
 
 A babel preset that configures itself for both metro with react-native and webpack with react-native-web. Use this instead of `module:metro-react-native-babel-preset`.
 
-**This actually doesn't work as well as it originally seemed to, so probably don't use it and just copy and paste this bit into your babel conf:**
+**If this preset doesn't match your exact use case, you can just copy this core bit into your `babel.config.js`:**
 
 ```js
-module.exports = ({ caller }, { noPresetEnv = false }) => {
+module.exports = ({ caller }) => {
   // is either "metro" or "babel-loader"
   const runningIn = caller(({ name }) => name);
   return {
